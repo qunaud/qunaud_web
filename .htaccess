@@ -1,0 +1,15 @@
+<Files ~ "^.(htaccess|htpasswd)$">
+deny from all
+</Files>
+
+Redirect temp /utau.html /utau/index.html
+
+order deny,allow
+
+ErrorDocument 401 http://qunaud.dip.jp/index.html
+
+<ifModule mod_expires.c>
+     ExpiresActive On
+     ExpiresByType image/jpeg "access plus 1 months"
+     ExpiresByType text/css "access plus 1 months"
+</ifModule>

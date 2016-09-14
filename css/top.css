@@ -1,0 +1,21 @@
+/* ページトップ */
+#page-top {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 80%;
+}
+#page-top a {
+    background: #666;
+    text-decoration: none;
+    color: #fff;
+    width: 50px;
+    padding: 12px 0;
+    text-align: center;
+    display: block;
+    border-radius: 10px;
+}
+#page-top a:hover {
+    text-decoration: none;
+    background: #999;
+}

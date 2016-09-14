@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>クナウドの雑記帳</title>
+<link rel="stylesheet" type="text/css" href="common/css/base.css">
+<link rel="stylesheet" type="text/css" href="common/css/utau.css">
+<script type="text/javascript" src="common/js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="common/js/scripts.js"></script>
+<!--- ウェブ専用表示 JavaScript ver.1 by 甲斐駒電脳工房 --->
+
+</head>
+
+<body>
+
+<div id="container">
+
+  <header id="header_area">
+   	<h1>クナウドの雑記帳</h1>
+      <a href="index.html"><img src="common/img/logo.png" alt="クナウドの雑記帳"></a>
+      <p>ここはクナウドの適当な雑記帳です。UTAU音源配布や制作環境の晒しに使っていきます。</p>
+    </header>
+    
+    <div id="content_area">
+    
+<!----------------------------- menu start--------------------------------> 
+  
+	    	<div id="nav_area">
+            
+
+    	    	<ul id="g_nav">
+                <h1>メニュー</h1>
+                    <dl><a href="#">UTAU音源</a></dl>
+    	    	    	<li id="nav_01" class="nav_li"><a href="utauillu.html">イラスト</a></li>
+                        <li id="nav_02" class="nav_li"><a href="utaurule.html">利用規約</a></li>
+                    <dl><a href="work.html">制作環境</a></dl>
+                    <dl><a href="link.html">外部リンク</a></dl>
+                    <dl><a href="admin">管理者用</a></dl>
+
+    		    </ul>
+            	
+        	</div>
+
+<!----------------------------- menu end -------------------------------->
+     
+     
+<!----------------------------- news start-------------------------------->
+        <div id="main_area">
+
+
+        	<section id="news_01" class="news">
+            <div class="title">
+            	<h1></h1>                
+            </div>
+                
+                		
+              <div class="text_area">
+                	<p>クナウド作成のUTAU音源です</p>
+					<p>イラストと規約については別ページで</p>
+                    <p></p>
+
+					<p>ダウンロードは下記からおねがいします</p>
+					<p>最新VERSIONはくなっぽど3.0.2です</p>
+					<p>囁き音源配布しました3.0.0～と同じくCVVCです</p>
+					<p>囁きにはブレスが入っていないので使いたい場合は通常音源から抜き出して使用してください</p>
+				<p>一部uar形式で配布しているので手動インストールの場合は拡張子をzipに変更してください</p>
+                <iframe src="https://onedrive.live.com/embed?cid=E507C481B22875A6&resid=E507C481B22875A6%21107&authkey=ADZhCRWMpUaotQ4" width="165" height="128" frameborder="0" scrolling="no" style="margin:10px;"></iframe>
+				<p>■更新履歴■　<br>
+				<ul>
+<li>ver. 0.1 とりあえず公開</li>
+<li>ver. 0.2 周波数表が入っていなかった問題を修正</li>
+<li>ver. 1.0 azumaさんに原音設定してもらったので、正式版として公開</li>
+<li>ver. 1.1 一部音素を録り直し+追加音素</li>
+<li>ver. 1.2 一部音素を録り直し、readmeに文章を追加</li>
+<li>ver. 1.2.1 一部音素を録り直し、readme修正</li>
+<li>ver. 1.2.2 イラスト追加、それに合わせてreadme修正</li>
+<li>ver. 1.2.3 一部音素を修正</li>
+<li>ver. 1.2.4 uar化、音素追加、雛形として重音テト音声ライブラリーのreadmeを使用</li>
+<li>ver. 1.3.0 発声法を変えて新規録音</li>
+<li>ver. 1.4.0 マイクをAT2020にして新規録音</li>
+<li>ver. 1.5.0 連続音をAT2020にて収録</li>
+<li>ver. 1.6.0 単独音と連続音を統合</li>
+<li>ver. 1.7.0 I/FをROLAND　QUAD-CAPTCHAに変更。単独音のみ。</li>
+<li>ver. 1.8.0 なんとなく単独音新規収録</li>
+<li>ver. 1.9.0 なんとなく連続音新規収録</li>
+<li>ver. 2.0.0 1.8/1.9を統合</li>
+<li>var. 2.0.1 冬服イラスト追加</li>
+<li>var. 3.0.0 CVVC音源、二音階、語尾息、息音素</li>
+<li>囁var.1.0.0CVVC音源にて囁き音源配布</li>
+<li>var. 3.0.1 吸う音素の修正と息7の追加</li>
+<li>var. 3.0.2 不要な周波数表の削除とVoiceBank Activity対応化</li>
+<p>
+                </div>
+                
+                
+			</section>
+            
+            
+
+                         
+        </div>
+        
+        
+<!----------------------------- news END-------------------------------->       
+ 
+<!----------------------------- twitter start-------------------------------->        
+        <div id="twitter_area">
+        <?php
+// アクセスカウンタ１
+
+$fp = @fopen("counter1.txt", "r+") or die("Counter Error");
+flock($fp, LOCK_EX);
+$count = fgets($fp);
+$count++;
+rewind($fp);
+fputs($fp, $count);
+fclose($fp);
+$moji = "アクセス人数=";
+print "$moji $count";
+?>
+    
+        	<a class="twitter-timeline"  width="250" height="350" href="https://twitter.com/qunaud"  data-widget-id="490119919216779264">@qunaud からのツイート</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<br/>
+<a class="twitter-timeline" width="250" height="350" href="https://twitter.com/qunaud_test"  data-widget-id="490122784224186369">@qunaud_test からのツイート</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+        
+        </div>
+        
+<!----------------------------- twitter END-------------------------------->
+        
+    </div>
+        </div>
+    <div id="page-top">
+  <p><a id="move-page-top" href="#header_area">▲</a></p>
+</div>
+    
+    <footer id="footer_area">
+    	<small>Copyright (C) 2014 qunaud All Rights Resrved.</small>
+    </footer>
+
+</div>
+</body>
+</html>

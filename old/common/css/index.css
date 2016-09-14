@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* CSS Document */
+
+#content_area #main_area section .title {
+	overflow:hidden;
+	width:100%;
+}
+
+#content_area #main_area section .title h1 {
+	width:85%;
+	height:20px;
+	font-size:30px;
+	font-weight:bold;
+	margin:10px;
+	float:left;
+}
+
+#content_area #main_area section .title .tweet{
+	display:block;
+	height:20px;
+	margin:10px 0 0;
+	float:right;
+	width:10%;
+}
+
+#content_area #main_area section .text_area {
+	width:65%;
+	float:left;
+	margin:10px 5px 10px;
+	padding:3px;
+}
+
+#content_area #main_area section .figu {
+	width:31%;
+	float:right;
+	margin:10px 5px 10px;
+	padding:3px;
+}
+
+#page_move {
+	width:100%;
+	margin:5px auto 10px;
+}
+
+#page_move ul#page_move {
+	width:250px;
+	margin:0 auto 0;
+}
+
+#page_move ul#page_move li {
+	float:left;
+	width:50px;
+	margin:3px;
+	text-align:center;
+	list-style-type:none;
+	display:block;
+}

@@ -1,0 +1,176 @@
+﻿@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration:none;
+	color:#003;
+}
+a:hover {
+	color:#60F;
+}
+a img {
+	border-bottom-style:none;
+}
+p {
+	line-height:1.5em;
+}
+
+body {
+	font-family:"Noto Sans CJK TC Thin";
+	background:#F6F8FF;	
+	font-size:16px;
+	line-height:1.3em;
+	width:100%;
+	margin:0;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+
+#container {
+	width:100%;
+	margin:0;
+	overflow:hidden;
+}
+
+#header_area {
+	margin:0;
+	padding:0;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+
+#header_area h1 {
+	text-indent:-99em;
+	position:absolute;
+}
+#header_area p{
+	position:absolute;
+	float:right;
+	width:70%;
+	height:50px;
+	margin:150px 0 0 170px;
+}
+
+#header_area a img {
+	margin:0;
+	padding:0;
+	display:block;
+	float:left;
+	
+}
+
+#content_area {
+	border-top:solid 1px #000;
+	padding:5px;
+	overflow:hidden;
+	clear:both;
+}
+
+#content_area #nav_area {
+	font-family:"01フロップデザイン";
+	margin:5px;
+	padding:5px;
+	width:10%;
+	float:left;
+}
+
+#content_area #nav_area ul#g_nav {
+	width:100%;
+	margin:20px auto 10px;
+	padding:3px;
+}
+#content_area #nav_area ul#g_nav h1 {
+	margin:10px 0 20px;
+	text-align:center;
+	font-size:20px;
+}
+
+#content_area #nav_area ul#g_nav dl {
+	display:block;
+	width:95%;
+	margin:20px auto 10px;
+	font-size:15px;
+}
+
+#content_area #nav_area ul#g_nav li {
+	list-style-type:none;
+	font-weight:bold;
+	display:block;
+	width:95%;
+	margin:10px auto 10px;
+	text-indent:0.5em;
+}
+
+
+
+#content_area #main_area {
+	width:70%;
+	padding:5px;
+	margin:5px;
+	border-right:solid 1px #000;
+	border-left:solid 1px #000;
+	overflow:hidden;
+	float:left;
+}
+
+#content_area #main_area section {
+	width:98%;
+	margin:5px auto 80px;
+	padding:10px;
+	overflow:hidden;
+	background:#FFF;
+}
+
+
+#content_area #twitter_area{
+	float:right;
+	width:15%;
+}
+#content_area #twitter_area .twitter-timeline{
+	margin:20px auto 5px;
+}
+
+#footer_area {
+	clear:both;
+	width:100%;
+	height:20px;
+	margin:0;
+	text-align:center;
+}
+
+#page-top{
+  width:50px;
+  height:50px;
+  position:fixed;
+  right:16px;
+  bottom:16px;
+  clear:both;
+  display:none;
+  
+}
+ 
+#page-top p{
+  margin:0;
+  padding:0;
+  text-align:center;
+  background:#3b3b3b;
+  -webkit-transition:all 0.3s;
+  -moz-transition:all 0.3s;
+  transition:all 0.3s;
+}
+ 
+#page-top p:hover{
+  background:#8b8b8b;
+}
+ 
+#page-top p a{
+  color:#fff;
+  line-height:50px;
+  text-decoration:none;
+  display:block;
+  cursor:pointer;
+}

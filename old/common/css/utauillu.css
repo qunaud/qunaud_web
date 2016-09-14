@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+
+#content_area #main_area section .title h1 {
+	width:85%;
+	height:20px;
+	font-size:30px;
+	font-weight:bold;
+	margin:10px;
+	float:left;
+}
+
+#content_area #main_area section .title .tweet{
+	display:block;
+	height:20px;
+	margin:10px 0 0;
+	float:right;
+}
+
+#content_area #main_area section .text_area {
+	width:45%;
+	float:left;
+	margin:10px 5px 10px;
+	padding:3px;
+	text-align:center;
+}
+/* CSS Document */
+

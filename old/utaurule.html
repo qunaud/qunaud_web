@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>クナウドの雑記帳</title>
+<link rel="stylesheet" type="text/css" href="common/css/base.css">
+<link rel="stylesheet" type="text/css" href="common/css/utaurule.css">
+<script type="text/javascript" src="common/js/jquery-1.11.1.js"></script>
+<script>$(function() { $.get("kiyaku.txt", function(data){  html = data.replace(/[\n\r]/g, "<br />");  $("section.news p").html(html);});});</script>
+<script type="text/javascript" src="common/js/scripts.js"></script>
+</head>
+
+<body>
+
+<div id="container">
+
+  <header id="header_area">
+   	<h1>クナウドの雑記帳</h1>
+      <a href="index.html"><img src="common/img/logo.png" alt="クナウドの雑記帳"></a>
+      <p>ここはクナウドの適当な雑記帳です。UTAU音源配布や制作環境の晒しに使っていきます。</p>
+    </header>
+    
+    <div id="content_area">
+    
+<!----------------------------- menu start--------------------------------> 
+  
+	    	<div id="nav_area">
+            
+
+    	    	<ul id="g_nav">
+                <h1>メニュー</h1>
+                    <dl><a href="utau.html">UTAU音源</a></dl>
+    	    	    	<li id="nav_01" class="nav_li"><a href="utauillu.html">イラスト</a></li>
+                        <li id="nav_02" class="nav_li"><a href="#">利用規約</a></li>
+                    <dl><a href="work.html">制作環境</a></dl>
+                    <dl><a href="link.html">外部リンク</a></dl>
+					<dl><a href="admin">管理者用</a></dl>
+					
+
+    		    </ul>
+            	
+        	</div>
+
+<!----------------------------- menu end -------------------------------->
+     
+     
+<!----------------------------- news start-------------------------------->
+        <div id="main_area">
+
+
+        	<section id="news_01" class="news">
+            <p></p>
+          
+           
+			</section>
+            
+            
+
+                         
+        </div>
+        
+        
+<!----------------------------- news END-------------------------------->       
+ 
+<!----------------------------- twitter start-------------------------------->        
+        <div id="twitter_area">
+        	<a class="twitter-timeline"  width="250" height="350" href="https://twitter.com/qunaud"  data-widget-id="490119919216779264">@qunaud からのツイート</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<br/>
+<a class="twitter-timeline" width="250" height="350" href="https://twitter.com/qunaud_test"  data-widget-id="490122784224186369">@qunaud_test からのツイート</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+        
+        </div>
+        
+<!----------------------------- twitter END-------------------------------->
+        
+    </div>
+        </div>
+    <div id="page-top">
+  <p><a id="move-page-top" href="#header_area">▲</a></p>
+</div>
+    
+    <footer id="footer_area">
+    	<small>Copyright (C) 2014 qunaud All Rights Resrved.</small>
+    </footer>
+
+</div>
+</body>
+</html>
