@@ -62,7 +62,16 @@
 <br/>
 <?php
 print '<p class=lead>部屋の気温 = ';
-system("/home/pi/roomtemp.sh");
+$deviceId = '28-00000647211a';
+$sensor_path = '/sys/bus/w1/devices/'.$deviceId.'/w1_slave';
+$t = null;
+//温度取得
+exec("cat ".$sensor_path, $w1_slave);
+if(isset($w1_slave[1])){
+$tmp = explode('t=', $w1_slave[1]);
+if(isset($tmp[1])) $t = $tmp[1] / 1000;
+}
+echo $t;
 print '℃<br>CPU温度 = ';
 $cputemp = exec('cat /sys/class/thermal/thermal_zone0/temp');
 $cputemp = $cputemp/1000;
