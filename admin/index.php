@@ -87,7 +87,6 @@ print ' ℃</p>';
 <button onclick="window.open('cputemp.php')" class="btn btn-default btn-lg" >cputemp</button>
 <h2>WOL</h2>
 <button type="button"onclick="window.open('wol.php')" class="btn btn-default btn-lg" >qunaud-main</button><br/>
-<button type="button"onclick="window.open('wol2.php')" class="btn btn-default btn-lg">qunaud-sub</button><br/>
 <button type="button"onclick="window.open('wol3.php')" class="btn btn-default btn-lg">qunaud-tvsv</button><br/>
 </div>
 </div>
