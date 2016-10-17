@@ -85,6 +85,9 @@ print ' ℃</p>';
 <button type="button" class="btn btn-default btn-lg" onclick="location.reload()">ページを更新</button>
 <br/>
 <button onclick="window.open('cputemp.php')" class="btn btn-default btn-lg" >cputemp</button>
+<br/>
+<button onclick="window.open('adminer.php')" class="btn btn-default btn-lg" >adminer</button>
+<br/>
 <h2>WOL</h2>
 <button type="button"onclick="window.open('wol.php')" class="btn btn-default btn-lg" >qunaud-main</button><br/>
 <button type="button"onclick="window.open('wol3.php')" class="btn btn-default btn-lg">qunaud-tvsv</button><br/>
