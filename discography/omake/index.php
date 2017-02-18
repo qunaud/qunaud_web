@@ -4,7 +4,7 @@ session_start();
 $dsn = 'mysql:dbname=qucddb;host=localhost;charset=utf8';
 $user = 'qucd';
 $password = 'qucd0808';
-
+$regist_error ='none';
 //DB接続はじめ
 try{
     $dbh = new PDO($dsn, $user, $password);
@@ -14,10 +14,11 @@ try{
     $res = $stmt->fetch(PDO::FETCH_ASSOC);
     if(!empty($_POST["id"])){
     if(empty($res)){
-    $regist_error = "IDかパスワードが違います。<br />";
+    $regist_error = "IDかパスワードが違います。１<br />";
      $status = "failed";
-    }}
-    $hash =  $res['password'];
+    }
+    }
+    $hash =  $res["pass"];
     $pass = $_POST['password'];
     //パスワード比較
     $hikaku = password_verify($pass, $hash);
@@ -29,9 +30,11 @@ try{
     $file=$res['file'];
       }else{
     $status = "failed";
-    if(!empty($pass)){
-    $regist_error = "IDかパスワードが違います。<br />";
-    }
+   if(!empty($pass)){
+       echo $hikaku;
+   $regist_error = "IDかパスワードが違います。２<br />";
+    echo $hikaku;
+   }
    }
 //DB接続エラー時処理
 } catch (PDOException $e){
@@ -120,8 +123,11 @@ exit;
     <?php elseif($status == "failed"): 
        print('
     <div class="col-xs-offset-1">'
-        .$regist_error.'
-      </div>
+        .$regist_error.'<br>'
+        .$pass.'<br>'
+        .$password.'<br>'
+       .$res['file'].
+      '</div>
     ');?>
         <div class="row">
         <div class="col-md-6">
@@ -129,7 +135,7 @@ exit;
                 <div class="form-group">
                       <label for="id" class="col-sm-2 control-label">ID</label>
                           <div class="col-sm-5 ">
-                                <input required type="text" name="id" maxlength="10" class="form-control" placeholder="ID"/>
+                                <input required type="text" name="id" maxlength="20" class="form-control" placeholder="ID"/>
                                 </div>
                     </div>
                     <div class="form-group">
@@ -149,25 +155,6 @@ exit;
     </div>
  
     <?php endif; ?>
-
-
-    <!-- sm以下で非表示-->
-    <div class="col-md-3 hidden-sm hidden-xs">
-        <a class="twitter-timeline"  width="95%" height="500px" href="https://twitter.com/qunaud"  data-widget-id="490119919216779264">@qunaud からのツイート</a>
-         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-<br/>
-<a class="twitter-timeline" width="95%" height="500px" href="https://twitter.com/qunaud_test"  data-widget-id="490122784224186369">@qunaud_test からのツイート</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-    </div>
-    <!--sm以下で表示-->
-   <div class="col-xs-12 visible-xs visible-sm" style="margin-top:1em">
-        <div class="btn-group">
-       <a href="https://twitter.com/qunaud" class="twitter-follow-button" data-show-count="false">Follow @qunaud</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-<a href="https://twitter.com/qunaud_test" class="twitter-follow-button" data-show-count="false">Follow @qunaud_test</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-   </div>
-</div>
 
 <p id="page-top"><a href="#">▲</a></p>
     <footer class="footer">
