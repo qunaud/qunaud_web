@@ -106,7 +106,7 @@ $dbh = null;
       </div>
 </div>
     </header>
-    <div class="col-md-9 col-xs-12">
+    <div class="col-md-8 col-xs-12 col-md-offset-1">
     <h2>このページはクナウド放送局各作品のおまけページへのログインページです<br>
      ログイン後各作品の素材等がDLできます</h2>
 
