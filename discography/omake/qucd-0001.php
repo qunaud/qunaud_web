@@ -80,46 +80,21 @@ else {
         <h2>こちらはQUCD-0001 ネットの隅のその唄をのおまけページです<br>
         下記リンクより各素材をDL可能となっております</h2>
         
-        <?php
-	// ディレクトリのパスを記述
-	$dir = "/var/www/html/discography/omake/data/qucd-0001/" ;
+	<?php
+foreach(glob('data/qucd-0001/wav/*') as $file){
+if(is_file($file)){
+echo date("Y/m/d H:s",filemtime("$file"));
 
-	// ディレクトリの存在を確認し、ハンドルを取得
-	if( is_dir( $dir ) && $handle = opendir( $dir ) ) {
-		// [ul]タグ
-		echo "<ul>" ;
+echo "<a href=\"$file\">$file</a>";
 
-		// ループ処理
-		while( ($file = readdir($handle)) !== false ) {
-			// ファイルのみ取得
-			if( filetype( $path = $dir . $file ) == "file" ) {
-				/********************
-
-				  各ファイルへの処理
-
-				  $file ファイル名
-				  $path ファイルのパス
-
-				********************/
-
-				// [li]タグ
-				echo "<li>" ;
-
-				// ファイル名を出力する
-				echo $file ;
-
-				// ファイルのパスを出力する
-				echo " (" . $path . ")" ;
-
-				// [li]タグ
-				echo "</li>" ;
-			}
-		}
-
-		// [ul]タグ
-		echo "</ul>" ;
-	}
-  ?>
+$filesize = filesize($file);
+$s = array('B', 'KB', 'MB', 'GB', 'TB', 'PB');
+$e = floor(log($filesize)/log(1024));
+echo $filename . ' ' . sprintf('%.1f '.$s[$e], ($filesize/pow(1024, floor($e))));
+}
+echo '<br />';
+}
+?>
   </div>
 
   <p id="page-top"><a href="#">▲</a></p>
