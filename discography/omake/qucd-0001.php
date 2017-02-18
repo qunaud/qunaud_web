@@ -80,21 +80,29 @@ else {
         <h2>こちらはQUCD-0001 ネットの隅のその唄をのおまけページです<br>
         下記リンクより各素材をDL可能となっております</h2>
         
-	<?php
-foreach(glob('data/qucd-0001/wav/*') as $file){
-if(is_file($file)){
-echo date("Y/m/d H:s",filemtime("$file"));
-
-echo "<a href=\"$file\">$file</a>";
-
-$filesize = filesize($file);
-$s = array('B', 'KB', 'MB', 'GB', 'TB', 'PB');
-$e = floor(log($filesize)/log(1024));
-echo $filename . ' ' . sprintf('%.1f '.$s[$e], ($filesize/pow(1024, floor($e))));
+<?php
+$path = 'data/qucd-0001/';
+recursion_dir($path);
+ 
+// フォルダ名を出力
+function recursion_dir($dir) {
+	$target = "*.*"; // ここには複数定義可能。(e.g. '{*.jpg,*.gif}')
+ 
+	foreach(glob($dir . "/*", GLOB_ONLYDIR) as $sub) {
+	  echo "Directory: " . $sub . "<br />";
+	  recursion_file($sub, $target);
+	  recursion_dir($sub);
+	}
 }
-echo '<br />';
+ 
+// ファイル名を出力
+function recursion_file($dir, $target) {
+	foreach(glob($dir . "/" . $target, GLOB_BRACE) as $file) {
+	  echo "File: " . $file . "<br />";
+	}
 }
 ?>
+
   </div>
 
   <p id="page-top"><a href="#">▲</a></p>
