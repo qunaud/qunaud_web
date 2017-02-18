@@ -119,6 +119,7 @@ else {
 		// [ul]タグ
 		echo "</ul>" ;
 	}
+  ?>
   </div>
 
   <p id="page-top"><a href="#">▲</a></p>
