@@ -80,3 +80,56 @@ else {
         <h2>こちらはQUCD-0001 ネットの隅のその唄をのおまけページです<br>
         下記リンクより各素材をDL可能となっております</h2>
         
+        <?php
+	// ディレクトリのパスを記述
+	$dir = "/var/www/html/discography/omake/data/qucd-0001/" ;
+
+	// ディレクトリの存在を確認し、ハンドルを取得
+	if( is_dir( $dir ) && $handle = opendir( $dir ) ) {
+		// [ul]タグ
+		echo "<ul>" ;
+
+		// ループ処理
+		while( ($file = readdir($handle)) !== false ) {
+			// ファイルのみ取得
+			if( filetype( $path = $dir . $file ) == "file" ) {
+				/********************
+
+				  各ファイルへの処理
+
+				  $file ファイル名
+				  $path ファイルのパス
+
+				********************/
+
+				// [li]タグ
+				echo "<li>" ;
+
+				// ファイル名を出力する
+				echo $file ;
+
+				// ファイルのパスを出力する
+				echo " (" . $path . ")" ;
+
+				// [li]タグ
+				echo "</li>" ;
+			}
+		}
+
+		// [ul]タグ
+		echo "</ul>" ;
+	}
+  </div>
+
+  <p id="page-top"><a href="#">▲</a></p>
+    <footer class="footer">
+        <div class=" container col-xs-12">
+    	<p class="small text-muted text-center">Copyright (C) 2014-2017 qunaud All Rights Resrved.</p>
+        </div>
+    </footer>
+
+    <script src="../../js/bootstrap.min.js"></script>
+</script>
+</body>
+
+</html>
