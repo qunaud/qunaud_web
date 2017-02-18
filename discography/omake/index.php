@@ -4,7 +4,6 @@ session_start();
 $dsn = 'mysql:dbname=qucddb;host=localhost;charset=utf8';
 $user = 'qucd';
 $password = 'qucd0808';
-$regist_error ='none';
 //DB接続はじめ
 try{
     $dbh = new PDO($dsn, $user, $password);
@@ -14,14 +13,11 @@ try{
     $res = $stmt->fetch(PDO::FETCH_ASSOC);
     if(!empty($_POST["id"])){
     if(empty($res)){
-    $regist_error = "IDかパスワードが違います。１<br />";
+    $regist_error = "IDかパスワードが違います。<br />";
      $status = "failed";
     }
     }
-    $hash =  $res["pass"];
-    $pass = $_POST['password'];
     //パスワード比較
-    $hikaku = password_verify($pass, $hash);
   if(password_verify($_POST['password'], $res["pass"])){
     $status = "ok";
     //セッションにユーザ名を保存
@@ -30,10 +26,8 @@ try{
     $file=$res['file'];
       }else{
     $status = "failed";
-   if(!empty($pass)){
-       echo $hikaku;
-   $regist_error = "IDかパスワードが違います。２<br />";
-    echo $hikaku;
+   if(!empty($_POST['password'])){
+   $regist_error = "IDかパスワードが違います。<br />";
    }
    }
 //DB接続エラー時処理
@@ -95,7 +89,7 @@ $dbh = null;
           </ul>
         </li>
       <li><a href="../../work.html">制作環境</a></li>
-       <li><a href="../discography/">作品集</a></li>
+       <li><a href="../">作品集</a></li>
       <li><a href="../../link.html">外部リンク</a></li>
       <li><a href="../../admin/">管理用</a></li>
     </ul>
@@ -123,12 +117,8 @@ exit;
     <?php elseif($status == "failed"): 
        print('
     <div class="col-xs-offset-1">'
-        .$regist_error.'<br>'
-        .$pass.'<br>'
-        .$hikaku.'<br>'
-       .$hash.'<br>'
-       .$hikaku.
-      '</div>
+        .$regist_error.'<br>
+      </div>
     ');?>
         <div class="row">
         <div class="col-md-6">
