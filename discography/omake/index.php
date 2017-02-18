@@ -22,7 +22,7 @@ try{
     $pass = $_POST['password'];
     //パスワード比較
     $hikaku = password_verify($pass, $hash);
-  if($hikaku == 1){
+  if(password_verify($_POST['password'], $res["pass"])){
     $status = "ok";
     //セッションにユーザ名を保存
     $_SESSION["id"] = $_POST["id"];
