@@ -125,8 +125,9 @@ exit;
     <div class="col-xs-offset-1">'
         .$regist_error.'<br>'
         .$pass.'<br>'
-        .$password.'<br>'
-       .$res['file'].
+        .$hikaku.'<br>'
+       .$hash.'<br>'
+       .$hikaku.
       '</div>
     ');?>
         <div class="row">
