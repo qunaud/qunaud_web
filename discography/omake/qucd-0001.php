@@ -76,8 +76,8 @@ else {
 </div>
     </header>
 
-    <div class="col-xs-12">
-        <h2>こちらはQUCD-0001 ネットの隅のその唄をのおまけページです<br>
+    <div class="col-xs-9">
+        <h2>こちらは<a href="../qucd-0001.html">QUCD-0001 ネットの隅のその唄を</a>のおまけページです<br>
         下記リンクより各素材をDL可能となっております</h2>
         <p>各リンクを右クリックし"名前をつけてリンク先保存"でDL下さい</p>
         <ul>
@@ -104,9 +104,26 @@ function recursion_file($dir, $target) {
 	}
 }
 ?>
-
+</ul>
+<a href="#" onclick="javascript:window.history.back(-1);return false;">戻る</a>
   </div>
-
+    <!-- sm以下で非表示-->
+    <div class="col-md-3 hidden-sm hidden-xs">
+        <a class="twitter-timeline"  width="95%" height="500px" href="https://twitter.com/qunaud"  data-widget-id="490119919216779264">@qunaud からのツイート</a>
+         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<br/>
+<a class="twitter-timeline" width="95%" height="500px" href="https://twitter.com/qunaud_test"  data-widget-id="490122784224186369">@qunaud_test からのツイート</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
+    <!--sm以下で表示-->
+   <div class="col-xs-12 visible-xs visible-sm" style="margin-top:1em">
+        <div class="btn-group">
+       <a href="https://twitter.com/qunaud" class="twitter-follow-button" data-show-count="false">Follow @qunaud</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<a href="https://twitter.com/qunaud_test" class="twitter-follow-button" data-show-count="false">Follow @qunaud_test</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+   </div>
+</div>
   <p id="page-top"><a href="#">▲</a></p>
     <footer class="footer">
         <div class=" container col-xs-12">
