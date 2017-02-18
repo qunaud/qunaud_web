@@ -106,6 +106,9 @@ $dbh = null;
       </div>
 </div>
     </header>
+    <div class="col-md-9 col-xs-12">
+    <h2>このページはクナウド放送局各作品のおまけページへのログインページです<br>
+     ログイン後各作品の素材等がDLできます</h2>
 
     <?php if($status == "logged_in"): 
     echo "すでに";
@@ -146,6 +149,27 @@ exit;
     </div>
  
     <?php endif; ?>
+        <a href="#" onclick="javascript:window.history.back(-1);return false;">戻る</a>
+</div>
+</div>
+</div>
+    <!-- sm以下で非表示-->
+    <div class="col-md-3 hidden-sm hidden-xs">
+        <a class="twitter-timeline"  width="95%" height="500px" href="https://twitter.com/qunaud"  data-widget-id="490119919216779264">@qunaud からのツイート</a>
+         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<br/>
+<a class="twitter-timeline" width="95%" height="500px" href="https://twitter.com/qunaud_test"  data-widget-id="490122784224186369">@qunaud_test からのツイート</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
+    <!--sm以下で表示-->
+   <div class="col-xs-12 visible-xs visible-sm" style="margin-top:1em">
+        <div class="btn-group">
+       <a href="https://twitter.com/qunaud" class="twitter-follow-button" data-show-count="false">Follow @qunaud</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<a href="https://twitter.com/qunaud_test" class="twitter-follow-button" data-show-count="false">Follow @qunaud_test</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+   </div>
+</div>
 
 <p id="page-top"><a href="#">▲</a></p>
     <footer class="footer">
