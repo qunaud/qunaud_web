@@ -1,8 +1,8 @@
 <?php
 //初期化
 session_start();
-$dsn = 'mysql:dbname=qucddb;host=localhost;charset=utf8b4';
-$user = 'qucd;
+$dsn = 'mysql:dbname=qucddb;host=localhost;charset=utf8';
+$user = 'qucd';
 $password = 'qucd0808';
 
 //DB接続はじめ
@@ -26,7 +26,7 @@ try{
     //セッションにユーザ名を保存
     $_SESSION["id"] = $_POST["id"];
     $_SESSION["id"]=$res['id'];
-    $file=&res['file'];
+    $file=$res['file'];
       }else{
     $status = "failed";
     if(!empty($pass)){
