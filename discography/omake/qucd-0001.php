@@ -79,9 +79,10 @@ else {
     <div class="col-xs-12">
         <h2>こちらはQUCD-0001 ネットの隅のその唄をのおまけページです<br>
         下記リンクより各素材をDL可能となっております</h2>
-        
+        <p>各リンクを右クリックし"名前をつけてリンク先保存"でDL下さい</p>
+        <ul>
 <?php
-$path = 'data/qucd-0001/';
+$path = 'data/qucd-0001';
 recursion_dir($path);
  
 // フォルダ名を出力
@@ -89,16 +90,17 @@ function recursion_dir($dir) {
 	$target = "*.*"; // ここには複数定義可能。(e.g. '{*.jpg,*.gif}')
  
 	foreach(glob($dir . "/*", GLOB_ONLYDIR) as $sub) {
-	  echo "Directory: " . $sub . "<br />";
+	 // echo "Directory: " . $sub . "<br />";
 	  recursion_file($sub, $target);
 	  recursion_dir($sub);
 	}
 }
- 
+
 // ファイル名を出力
 function recursion_file($dir, $target) {
 	foreach(glob($dir . "/" . $target, GLOB_BRACE) as $file) {
-	  echo "File: " . $file . "<br />";
+     $filename = mb_substr($file , 15);
+	  echo '<li>File: <a href="' . $file . '">'.$filename.'</a></li>';
 	}
 }
 ?>
