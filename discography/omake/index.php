@@ -52,17 +52,11 @@ $dbh = null;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-<link href="../css/sticky-footer.css" rel="stylesheet">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+<link href="../../css/sticky-footer.css" rel="stylesheet">
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-    <script src="../js/top.js"></script>
-    <link href="../css/top.css" rel="stylesheet">
+    <script src="../../js/top.js"></script>
+    <link href="../../css/top.css" rel="stylesheet">
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -78,7 +72,7 @@ $dbh = null;
 <nav class="navbar navbar-default navbar-fixed-top">
 <div class="container">
   <div class="navbar-header">
-       <a href="../" class="navbar-brand">クナウドの雑記帳</a>
+       <a href="../../" class="navbar-brand">クナウドの雑記帳</a>
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
       <span class="sr-only">メニュー</span>
       <span class="icon-bar"></span>
@@ -90,17 +84,17 @@ $dbh = null;
   <div id="gnavi" class="collapse navbar-collapse">
     <ul class="nav navbar-nav">
       <li class="dropdown">
-          <a href="../utau/index.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UTAU<span class="caret"></span></a>
+          <a href="../../utau/index.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UTAU<span class="caret"></span></a>
             <ul class="dropdown-menu">
-                <li><a href="../utau/index.html">Info</a></li>
-            <li><a href="../utau/kiyaku.html">利用規約</a></li>
-            <li><a href="../utau/illust.html">イラスト</a></li>
+                <li><a href="../../utau/index.html">Info</a></li>
+            <li><a href="../../utau/kiyaku.html">利用規約</a></li>
+            <li><a href="../../utau/illust.html">イラスト</a></li>
           </ul>
         </li>
-      <li><a href="../work.html">制作環境</a></li>
+      <li><a href="../../work.html">制作環境</a></li>
        <li><a href="../discography/">作品集</a></li>
-      <li><a href="../link.html">外部リンク</a></li>
-      <li><a href="../admin/">管理用</a></li>
+      <li><a href="../../link.html">外部リンク</a></li>
+      <li><a href="../../admin/">管理用</a></li>
     </ul>
   </div>
 </div>
@@ -108,7 +102,7 @@ $dbh = null;
 <body>
 
   <header   class="header ">
-      <a href="../index.html"><img src="../img/logo.png" alt="クナウドの雑記帳"  class="img-responsive"></a> 
+      <a href="../../index.html"><img src="../../img/logo.png" alt="クナウドの雑記帳"  class="img-responsive"></a> 
         <div class="row">
          <div class="col-xs-11 col-sm-offset-1">  
       <p>ここはクナウドの適当な雑記帳です。UTAU音源配布や制作環境の晒しに使っていきます。</p>
@@ -151,7 +145,6 @@ exit;
                          </div>
                 </form>
       <br>
-        <input type="button" onclick="location.href='usertouroku.php'" value="新規登録" class="btn btn-default">
          </div>
     </div>
  
@@ -183,7 +176,7 @@ exit;
         </div>
     </footer>
 
-    <script src="../js/bootstrap.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
 </script>
 </body>
 
